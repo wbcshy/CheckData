@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.renren.dao.WDataMapper">
+   <select id="selecWMore" parameterType="io.renren.entity.WData" resultType="io.renren.entity.WData">
+        select tem,humi,mq,dateStr,DATE_FORMAT(date,'%Y-%m-%d %H:%i:%s')date from wdata
+		<!--where  taizhan_num ="A0001"
+		and date &gt;="2017-03-08 00:00:00"
+		and date  &lt;=NOW() -->
+		order by date asc
+   </select>
+</mapper>
